@@ -1,0 +1,403 @@
+/* ============================================================
+   styles.css — Currículo Vinícius Alvim Silveira
+   Cores baseadas na identidade visual da Lumia
+   ============================================================ */
+
+/* ---------- IMPORTAÇÃO DE FONTE ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Questrial&display=swap');
+
+/* ---------- RESET BÁSICO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- VARIÁVEIS DE COR ---------- */
+:root {
+  --navy:       #173B50;
+  --navy-deep:  #0E2A3C;
+  --teal:       #4CB794;
+  --teal-soft:  #E3F3EC;
+  --mint:       #6CF3CE;
+  --ink:        #1D2A33;
+  --ink-soft:   #5C6E78;
+  --paper:      #FFFFFF;
+  --soft:       #F6F8F7;
+  --borda:      #E3E8E6;
+}
+
+/* ---------- BODY ---------- */
+body {
+  font-family: 'Questrial', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--soft);
+}
+
+/* ---------- NAVEGAÇÃO ---------- */
+#navbar {
+  background-color: var(--navy-deep);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--teal);
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+
+.nav-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--mint);
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  color: #CFE9DD;
+  letter-spacing: 0.03em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--mint);
+  border-bottom-color: var(--mint);
+}
+
+/* ---------- HERO / CABEÇALHO ---------- */
+#hero {
+  background: linear-gradient(150deg, var(--navy-deep) 0%, var(--navy) 100%);
+  padding: 48px 24px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+#foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--mint);
+  flex-shrink: 0;
+}
+
+.hero-texto h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+}
+
+.hero-texto .subtitulo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #CFE9DD;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.contatos {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contatos li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-decoration: none;
+  color: #EAF6F0;
+  background-color: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  padding: 5px 12px;
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.contatos li a:hover {
+  background-color: var(--teal);
+  color: #FFFFFF;
+}
+
+/* ---------- MAIN / LAYOUT ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---------- SEÇÕES ---------- */
+.secao {
+  background-color: var(--paper);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 28px 28px;
+}
+
+.secao-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--teal-soft);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* pastilha colorida antes do título */
+.secao-titulo::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--teal);
+  flex-shrink: 0;
+}
+
+.subtitulo-secao {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  padding: 16px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background-color: var(--soft);
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+}
+
+.destaque {
+  color: var(--teal);
+}
+
+.instituicao {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+/* ---------- BADGES ---------- */
+.badge {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background-color: var(--navy);
+  color: #FFFFFF;
+}
+
+.badge-ok {
+  background-color: var(--teal);
+  color: #FFFFFF;
+}
+
+/* ---------- TAGS ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--teal);
+  background-color: var(--teal-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.link-projeto {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.link-projeto:hover {
+  text-decoration: underline;
+}
+
+/* ---------- TABELA DE HABILIDADES ---------- */
+#tabela-habilidades,
+#tabela-idiomas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+#tabela-habilidades th,
+#tabela-idiomas th {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background-color: var(--navy);
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10px 14px;
+}
+
+#tabela-habilidades td,
+#tabela-idiomas td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--borda);
+  color: var(--ink-soft);
+}
+
+/* linhas alternadas */
+#tabela-habilidades tbody tr:nth-child(even),
+#tabela-idiomas tbody tr:nth-child(even) {
+  background-color: var(--teal-soft);
+}
+
+#tabela-habilidades tbody tr:hover,
+#tabela-idiomas tbody tr:hover {
+  background-color: #d2eee3;
+}
+
+/* primeira coluna em destaque */
+#tabela-habilidades tbody td:first-child {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  width: 180px;
+}
+
+/* ---------- LISTA DE CERTIFICADOS ---------- */
+.lista-cert {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lista-cert li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  padding-left: 4px;
+}
+
+.lista-cert li::before {
+  content: "●";
+  color: var(--teal);
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.lista-cert li strong {
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ---------- RODAPÉ ---------- */
+#rodape {
+  background-color: var(--navy-deep);
+  text-align: center;
+  padding: 20px 24px;
+  color: #8AACBA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-top: 3px solid var(--teal);
+}
+
+#rodape a {
+  color: var(--mint);
+  text-decoration: none;
+}
+
+#rodape a:hover {
+  text-decoration: underline;
+}
