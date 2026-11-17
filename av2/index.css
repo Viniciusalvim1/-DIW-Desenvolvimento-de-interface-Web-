@@ -1,81 +1,40 @@
-/* I) Fonte e cor de fundo do body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2efe9;
-    color: #333333;
-    margin: 0;
-    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-/* II) Largura, centralização e border-collapse */
 table {
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: white;
 }
 
-/* III) Bordas visíveis e padding nas células */
 th, td {
     border: 1px solid #cccccc;
-    padding: 20px;
-    vertical-align: top;
+    padding: 15px;
 }
 
-/* IV) Cabeçalho com fundo colorido e texto em contraste */
 th {
-    background-color: #8b1a1a;
-    color: #ffffff;
-    text-align: center;
+    background-color: darkred;
+    color: white;
 }
 
-th h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-.col-imagem {
-    width: 40%;
-    text-align: center;
-    vertical-align: middle;
-}
-
-h2 {
-    color: #8b1a1a;
-    margin-top: 0;
-}
-
-h3 {
-    color: #555555;
-}
-
-/* IV) Rodapé com fundo claro */
 .rodape {
     background-color: #eeeeee;
     text-align: center;
-    font-size: 14px;
 }
 
-.rodape p {
-    margin: 0;
-}
-
-/* V) Tamanho e cantos arredondados da imagem */
 img {
-    width: 280px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
 }
 
-/* VI) Cor do hiperlink e efeito no :hover */
 a {
-    color: #d35400;
-    font-weight: bold;
-    text-decoration: none;
+    color: darkorange;
 }
 
 a:hover {
-    color: #8b1a1a;
-    text-decoration: underline;
+    color: darkred;
 }
