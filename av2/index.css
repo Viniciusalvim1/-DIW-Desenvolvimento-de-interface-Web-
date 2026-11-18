@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+table {
+    width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+th {
+    background-color: darkred;
+    color: white;
+}
+
+.rodape {
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+a {
+    color: darkorange;
+}
+
+a:hover {
+    color: darkred;
+}
